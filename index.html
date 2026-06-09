@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO ── -->
+  <title>Reyd — Yiddish Grammar, Translation & Audio Transcription</title>
+  <meta name="description" content="Fix Yiddish grammar, rephrase, translate, and transcribe audio — all in one tool built for Heimish writers, translators, and publishers. Web and Windows desktop app." />
+  <meta name="keywords" content="Yiddish grammar, Yiddish translation, Yiddish transcription, Heimish, Yiddish audio, STT, text correction" />
+  <link rel="canonical" href="https://reyd.app/" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://reyd.app/" />
+  <meta property="og:title"       content="Reyd — Yiddish Productivity Tools" />
+  <meta property="og:description" content="Fix grammar, translate, and transcribe Yiddish — in seconds. Web + Windows desktop." />
+  <meta property="og:image"       content="https://reyd.app/og-image.png" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Reyd — Yiddish Productivity Tools" />
+  <meta name="twitter:description" content="Fix grammar, translate, and transcribe Yiddish — in seconds." />
+  <meta name="twitter:image"       content="https://reyd.app/og-image.png" />
+
+  <!-- ── Fonts ── -->
+  <!-- Inter for Latin UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Alef subseted to Hebrew Unicode block; Inter for Latin -->
+  <link href="https://fonts.googleapis.com/css2?family=Alef&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ── Analytics (Plausible — privacy-first, no cookies) ── -->
+  <!-- <script defer data-domain="reyd.app" src="https://plausible.io/js/script.js"></script> -->
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231D5C63'/><text y='.9em' font-size='80' font-family='serif' fill='white'>ר</text></svg>" />
+</head>
+<body>
+
+<!-- ════════════════════════════
+     NAVIGATION
+════════════════════════════ -->
+<header>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo" aria-label="Reyd home">
+        <div class="logo-icon" aria-hidden="true">ר</div>
+        <div class="logo-name">
+          <span>Reyd</span>
+          <span>Yiddish Tools</span>
+        </div>
+      </a>
+
+      <ul class="navbar-links" role="list">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#desktop">Desktop App</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#pricing" class="btn btn-primary navbar-cta">Try it free</a>
+
+      <div class="hamburger" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#desktop">Desktop App</a>
+      <a href="#contact">Contact</a>
+      <a href="#pricing" class="btn btn-primary" style="margin-top:8px;justify-content:center;">Try it free</a>
+    </nav>
+  </nav>
+</header>
+
+<main>
+
+<!-- ════════════════════════════
+     HERO
+════════════════════════════ -->
+<section class="hero" id="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span aria-hidden="true">🆕</span> Now in early access
+        </div>
+        <h1 id="hero-heading">
+          Fix, rephrase, translate,<br />and transcribe <span lang="yi">ייִדיש</span> — in seconds.
+        </h1>
+        <p class="hero-sub">
+          The Yiddish productivity toolkit for Heimish writers, translators, and publishers. Works in your browser and any Windows app.
+        </p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary btn-lg">Start free</a>
+          <a href="#how-it-works" class="btn btn-outline btn-lg">See how it works</a>
+        </div>
+        <p class="hero-note">No credit card required &mdash; free tier available</p>
+      </div>
+
+      <!-- Interactive demo panel -->
+      <div class="demo-panel" role="img" aria-label="Demo: Yiddish grammar correction">
+        <div class="demo-topbar">
+          <div class="demo-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="demo-title">reyd.app — editor</div>
+        </div>
+        <div class="demo-body">
+          <div class="demo-label">Input text</div>
+          <div class="demo-input" dir="rtl" lang="yi">
+            איך <span class="error-span">האב</span> הייַנט אנגעשריבן <span class="error-span">עטלעכע</span> בריוועס צו מיין פרייַנד.
+          </div>
+
+          <div class="demo-actions" aria-label="Actions">
+            <button class="demo-action-btn active" type="button">Fix Grammar</button>
+            <button class="demo-action-btn" type="button">Rephrase</button>
+            <button class="demo-action-btn" type="button">Translate</button>
+          </div>
+
+          <div class="demo-label">Corrected output</div>
+          <div class="demo-output" dir="rtl" lang="yi" style="position:relative;">
+            <span class="demo-tick">✓ Fixed</span>
+            איך האב הייַנט אנגעשריבן עטלעכע בריוועס צו מיין פרייַנד.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     FEATURES
+════════════════════════════ -->
+<section class="section" id="features" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Features</div>
+      <h2 id="features-heading">Everything you need for Yiddish work</h2>
+      <p>Built for Heimish orthography. Works with the Yiddish you actually write — not just YIVO standard.</p>
+    </div>
+
+    <div class="features-grid" role="list">
+      <div class="feature-card" role="listitem">
+        <span class="feature-icon" aria-hidden="true">✏️</span>
+        <h3>Fix &amp; Rephrase</h3>
+        <p>Correct Yiddish grammar and rephrase naturally with one click. Preserves Heimish orthography and spelling conventions.</p>
+      </div>
+      <div class="feature-card" role="listitem">
+        <span class="feature-icon" aria-hidden="true">🔄</span>
+        <h3>Translate</h3>
+        <p>
+          <span lang="yi">ייִדיש</span> ↔ English translation. Paste your text and get a clean, accurate translation — no app-switching needed.
+        </p>
+      </div>
+      <div class="feature-card" role="listitem">
+        <span class="feature-icon" aria-hidden="true">🎙️</span>
+        <h3>Transcribe Audio</h3>
+        <p>Upload a lecture, voice note, or recording. Get polished Yiddish text — optionally with an English transcript side-by-side.</p>
+      </div>
+      <div class="feature-card" role="listitem">
+        <span class="feature-icon" aria-hidden="true">🖥️</span>
+        <h3>Desktop App (Windows)</h3>
+        <p>Highlight text in Word, Chrome, or Notepad, press <strong>Ctrl+Shift+Y</strong>, and get corrected Yiddish — without leaving your app.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     HOW IT WORKS
+════════════════════════════ -->
+<section class="section section-alt" id="how-it-works" aria-labelledby="hiw-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">How it works</div>
+      <h2 id="hiw-heading">Three steps. Seconds, not minutes.</h2>
+      <p>From raw text or audio to polished Yiddish — as fast as copy-paste.</p>
+    </div>
+
+    <div class="steps" role="list">
+      <div class="step" role="listitem">
+        <div class="step-number" aria-hidden="true">1</div>
+        <h3>Paste text or upload audio</h3>
+        <p>Works with any Yiddish text, Word document, or audio file (MP3, WAV, M4A). Record directly in the browser too.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-number" aria-hidden="true">2</div>
+        <h3>Choose your action</h3>
+        <p>Fix grammar, rephrase for clarity, translate to English, or transcribe your audio to text. One click.</p>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-number" aria-hidden="true">3</div>
+        <h3>Copy your result</h3>
+        <p>Clean, polished Yiddish text ready to use. Version history saves every revision so you can always go back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     PRICING
+════════════════════════════ -->
+<section class="section" id="pricing" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Pricing</div>
+      <h2 id="pricing-heading">Simple, credit-based pricing</h2>
+      <p>Credits never expire. Start free — upgrade when you need more.</p>
+    </div>
+
+    <div class="pricing-toggle" role="group" aria-label="Billing period">
+      <span class="toggle-label">Monthly</span>
+      <div class="toggle-switch" id="billing-toggle" role="switch" aria-checked="false" tabindex="0">
+        <div class="toggle-knob"></div>
+      </div>
+      <span class="toggle-label">Annual <span class="toggle-save">Save 20%</span></span>
+    </div>
+
+    <div class="pricing-grid" role="list">
+
+      <!-- Free -->
+      <div class="pricing-card" role="listitem">
+        <div class="pricing-tier">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-period">forever</div>
+        <hr class="pricing-divider" />
+        <ul class="pricing-features" aria-label="Free plan features">
+          <li><span class="pricing-placeholder">TBD</span> credits/month</li>
+          <li>Credits never expire</li>
+          <li>Grammar fix &amp; rephrase</li>
+          <li>Translation</li>
+          <li>Standard queue</li>
+          <li>Web app</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Get started free</a>
+      </div>
+
+      <!-- Basic -->
+      <div class="pricing-card" role="listitem">
+        <div class="pricing-tier">Basic</div>
+        <div class="pricing-price"><span class="pricing-placeholder" style="font-size:1.4rem;">TBD</span></div>
+        <div class="pricing-period">per month</div>
+        <hr class="pricing-divider" />
+        <ul class="pricing-features" aria-label="Basic plan features">
+          <li><span class="pricing-placeholder">TBD</span> credits/month</li>
+          <li>Everything in Free</li>
+          <li>Priority queue</li>
+          <li>Email support</li>
+          <li>Audio transcription</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Join waitlist</a>
+      </div>
+
+      <!-- Pro — Most popular -->
+      <div class="pricing-card popular" role="listitem">
+        <div class="popular-badge">Most popular</div>
+        <div class="pricing-tier">Pro</div>
+        <div class="pricing-price"><span class="pricing-placeholder" style="font-size:1.4rem;">TBD</span></div>
+        <div class="pricing-period">per month</div>
+        <hr class="pricing-divider" />
+        <ul class="pricing-features" aria-label="Pro plan features">
+          <li><span class="pricing-placeholder">TBD</span> credits/month</li>
+          <li>Everything in Basic</li>
+          <li>Unlimited version history</li>
+          <li>Bulk document upload</li>
+          <li>Dual-language transcripts</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Join waitlist</a>
+      </div>
+
+      <!-- Publisher -->
+      <div class="pricing-card" role="listitem">
+        <div class="pricing-tier">Publisher</div>
+        <div class="pricing-price"><span class="pricing-placeholder" style="font-size:1.4rem;">TBD</span></div>
+        <div class="pricing-period">per month</div>
+        <hr class="pricing-divider" />
+        <ul class="pricing-features" aria-label="Publisher plan features">
+          <li><span class="pricing-placeholder">TBD</span> credits/month</li>
+          <li>Everything in Pro</li>
+          <li>API access</li>
+          <li>Team seats</li>
+          <li>Dedicated support</li>
+          <li>Custom integrations</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Contact us</a>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;margin-top:24px;font-size:.85rem;color:#888;">
+      ⚠️ Exact pricing finalized soon. <a href="#contact">Join the waitlist</a> to get notified and locked in at early-access rates.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     DESKTOP APP CTA
+════════════════════════════ -->
+<section class="desktop-cta section" id="desktop" aria-labelledby="desktop-heading">
+  <div class="container">
+    <div class="desktop-inner">
+      <div>
+        <div class="section-label" style="color:rgba(255,255,255,.7);">Desktop App</div>
+        <h2 id="desktop-heading">Work in any Windows app.</h2>
+        <p style="margin-top:16px;margin-bottom:8px;">
+          The Reyd desktop app puts Yiddish correction a hotkey away. Highlight text anywhere — Word, Chrome, Notepad — and get polished Yiddish back instantly.
+        </p>
+        <div class="hotkey-demo" aria-label="Keyboard shortcut: Ctrl plus Shift plus Y">
+          <kbd class="key">Ctrl</kbd>
+          <span style="color:rgba(255,255,255,.5)">+</span>
+          <kbd class="key">Shift</kbd>
+          <span style="color:rgba(255,255,255,.5)">+</span>
+          <kbd class="key">Y</kbd>
+          <span style="color:rgba(255,255,255,.6);font-size:.85rem;margin-left:8px;">= instant correction</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:24px;">
+          <button class="btn btn-disabled" disabled aria-disabled="true">Download for Windows</button>
+          <span class="coming-soon-tag">Coming soon</span>
+        </div>
+        <p style="margin-top:16px;color:rgba(255,255,255,.5);font-size:.85rem;">
+          <a href="#contact" style="color:rgba(255,255,255,.6);">Join the waitlist</a> to be first when it ships.
+        </p>
+      </div>
+
+      <div class="app-mockup" aria-label="Desktop app preview">
+        <div class="mockup-header">
+          <span>🪟</span>
+          <span>Microsoft Word — תשובה-בריוו.docx</span>
+        </div>
+        <div class="mockup-text" dir="rtl" lang="yi">
+          …לויט מיין מיינונג איז דאס א זייער וויכטיגן ענין
+          וואס מיר דארפן צו ריידן אריבער. איך האף אז…
+        </div>
+        <div class="mockup-action">
+          <span>✨</span>
+          <span style="flex:1">Reyd — Fix Grammar</span>
+          <span class="shortcut-chip">Ctrl+Shift+Y</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     CONTACT
+════════════════════════════ -->
+<section class="section section-alt" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Get in touch</div>
+      <h2 id="contact-heading">Questions? We'd love to hear from you.</h2>
+      <p>Early access, publisher inquiries, or just want to know more — reach out below.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Join the early access list</h3>
+        <p>
+          Reyd is in active development. Sign up to be among the first to try it — and to lock in early-access pricing before public launch.
+        </p>
+        <p>
+          For press, partnership, or publisher API inquiries, use the form or email us directly.
+        </p>
+        <div class="contact-email">
+          <span aria-hidden="true">📧</span>
+          <a href="mailto:hello@reyd.app">hello@reyd.app</a>
+        </div>
+
+        <div style="margin-top:32px;">
+          <h3 style="margin-bottom:12px;">What we're building for</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;">
+              <span>✍️</span> Heimish writers &amp; translators
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;">
+              <span>📚</span> Yiddish publishers &amp; editorial teams
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;">
+              <span>🎙️</span> Lecturers &amp; audio content creators
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;">
+              <span>🏫</span> Yiddish educators &amp; researchers
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Formspree contact form -->
+      <div class="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/PLACEHOLDER_FORM_ID" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">I'm interested in…</label>
+            <select id="subject" name="subject">
+              <option value="early-access">Early access / waitlist</option>
+              <option value="publisher-api">Publisher API access</option>
+              <option value="desktop-waitlist">Desktop app waitlist (Windows)</option>
+              <option value="press">Press / media inquiry</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about how you'd use Reyd…"></textarea>
+          </div>
+          <!-- Honeypot anti-spam field -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_subject" value="New Reyd inquiry" />
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+            Send message
+          </button>
+        </form>
+        <div class="form-success" id="form-success" role="alert">
+          ✅ Message received! We'll be in touch soon.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════════════════════════
+     FOOTER
+════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="navbar-logo" style="color:#fff;" aria-label="Reyd home">
+          <div class="logo-icon" aria-hidden="true">ר</div>
+          <div class="logo-name">
+            <span style="color:#fff;">Reyd</span>
+            <span>Yiddish Tools</span>
+          </div>
+        </a>
+        <p>
+          The Yiddish productivity toolkit for the Heimish community. Fix grammar, translate, transcribe audio — web and desktop.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#desktop">Desktop App</a></li>
+          <li><a href="#contact">Early Access</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Reyd. All rights reserved.</span>
+      <span>Built for the Heimish community 🕍</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Mobile nav toggle ──
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileNav.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+hamburger.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); hamburger.click(); }
+});
+// Close mobile nav on link click
+mobileNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// ── Billing toggle (visual only — pricing TBD) ──
+const toggle = document.getElementById('billing-toggle');
+toggle.addEventListener('click', () => {
+  const active = toggle.classList.toggle('active');
+  toggle.setAttribute('aria-checked', active);
+});
+toggle.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle.click(); }
+});
+
+// ── Contact form AJAX submit (Formspree) ──
+const form = document.getElementById('contact-form');
+const successMsg = document.getElementById('form-success');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form),
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
+});
+
+// ── Smooth-scroll for anchor links ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ── Active nav link highlighting on scroll ──
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.navbar-links a');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.style.color = link.getAttribute('href') === '#' + entry.target.id
+          ? 'var(--primary)'
+          : '';
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
